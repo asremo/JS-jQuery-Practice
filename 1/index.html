@@ -4,14 +4,41 @@
 
 <head>
     <script src="https://code.jquery.com/jquery-git.js"></script>
-    <script> //Your Code Here </script>
+    <script>
+        // function createDiv() {
+        //     const container = $("something")
+        //     container.append("div").text("something");
+        // }
+
+        function createDiv(){
+            $(document).ready(function () {
+                const test = {
+                    id: "div",
+                    class: "divclass",
+                    css: {
+                        color: "Red"
+                    }
+                };
+                const $div = $("<div>", test);
+                $div.html("New div tag is created.");
+                $("body").append($div);
+            });
+        }
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Create a div using jQuery with style tag.</title>    
 </head>
 
 <body>
-    <input type="button" value="Click to add new div tag" onclick="createDiv()" />
+    <div id="container">
+
+    </div>
+    <input 
+        type="button" 
+        value="Click to add new div tag" 
+        onclick="createDiv()" 
+    />
 </body>
 
 </html>
